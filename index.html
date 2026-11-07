@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light" style="color-scheme: light;"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Iuran WiFi NJ</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light;--bg:#f5f1ea;--card:#fff;--tx:#201a14;--mu:#7a7167;--bd:#e8e1d6;--ac:#f59300;--ac2:#ff6a00;--sh:0 2px 10px #0000000f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#14110e;--card:#201c17;--tx:#f3ede4;--mu:#a39a8e;--bd:#38322a;--sh:none}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#14110e;--card:#201c17;--tx:#f3ede4;--mu:#a39a8e;--bd:#38322a;--sh:none}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--tx);font:15px/1.4 system-ui,-apple-system,Roboto,sans-serif;max-width:560px;margin:0 auto;padding-bottom:40px}
+button{font:inherit;cursor:pointer}
+.hd{background:linear-gradient(135deg,var(--ac),var(--ac2));color:#fff;padding:18px 16px 54px;border-radius:0 0 26px 26px}
+.hd small{opacity:.85;letter-spacing:.12em;font-size:11px}.hd h1{margin:2px 0 0;font-size:21px;letter-spacing:.02em}
+.wrap{padding:0 12px;margin-top:-40px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;box-shadow:var(--sh);padding:12px;margin-bottom:12px}
+.nav{display:flex;align-items:center;gap:8px}
+.nav button{width:40px;height:40px;border-radius:12px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font-size:20px}
+.nav b{flex:1;text-align:center;font-size:17px}
+.bar{height:9px;background:var(--bd);border-radius:9px;overflow:hidden;margin:10px 0 8px}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--ac),var(--ac2));border-radius:9px}
+.sum{display:flex;justify-content:space-between;font-size:12px;color:var(--mu)}.sum b{display:block;color:var(--tx);font-size:15px}
+.tabs{display:flex;background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:4px;margin-bottom:12px}
+.tabs button{flex:1;border:0;background:none;color:var(--mu);padding:9px;border-radius:10px;font-weight:600}
+.tabs .on{background:linear-gradient(135deg,var(--ac),var(--ac2));color:#fff}
+.row{display:flex;gap:8px;align-items:stretch;margin-bottom:8px}
+.no{width:30px;border-radius:10px;background:#f59300;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-style:italic;flex:none}
+.nm{flex:1;min-width:0;background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:8px 10px;font-weight:800;letter-spacing:.02em;display:flex;flex-direction:column;justify-content:center;text-transform:uppercase}
+.nm small{font-weight:600;color:#e00000;font-size:11px;text-transform:none;letter-spacing:0}
+.st{width:42%;flex:none;border-radius:10px;color:#fff;font-weight:800;border:1px solid #0002;padding:6px 4px;text-align:center;font-size:13px;line-height:1.25}
+.st small{display:block;font-weight:600;font-size:11px;opacity:.9}
+.late{animation:p 1.6s infinite}@keyframes p{50%{box-shadow:0 0 0 3px #e0000055}}
+.btn{width:100%;padding:12px;border-radius:12px;border:1px dashed var(--mu);background:none;color:var(--tx);margin-bottom:8px;font-weight:600}
+.btn.pri{border:0;background:linear-gradient(135deg,var(--ac),var(--ac2));color:#fff}
+.leg{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}.leg span{font-size:11px;color:#fff;padding:3px 9px;border-radius:99px;font-weight:600}
+.warn{background:#e00000;color:#ffe600;text-align:center;font-weight:800;padding:14px 8px;border-radius:14px;margin-bottom:12px;letter-spacing:.03em}
+.acc{background:var(--card);border:1px solid var(--bd);border-left:6px solid var(--c);border-radius:12px;padding:10px 12px;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.acc div{flex:1;min-width:0}.acc small{color:var(--mu);display:block}.acc b{font-size:17px;color:var(--c);word-break:break-all}
+.sm{border:1px solid var(--bd);background:var(--bg);color:var(--tx);border-radius:8px;padding:6px 10px;font-size:13px}
+.rk{margin-bottom:10px}.rk div{display:flex;justify-content:space-between;font-size:13px;margin-bottom:3px}.rk .bar{margin:0;height:12px}
+#ov{position:fixed;inset:0;background:#000a;display:none;align-items:flex-end;z-index:5}
+#sh{background:var(--card);color:var(--tx);width:100%;max-width:560px;margin:0 auto;border-radius:22px 22px 0 0;padding:16px 16px calc(16px + env(safe-area-inset-bottom,0px));max-height:92%;overflow:auto}
+#sh h3{margin:0 0 2px;text-transform:uppercase}
+label{display:block;font-size:12px;color:var(--mu);margin:10px 0 4px}
+input,textarea{width:100%;padding:10px;border-radius:10px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font:16px system-ui}
+.chips{display:flex;flex-wrap:wrap;gap:6px}.chips button{padding:9px 13px;border-radius:99px;border:2px solid transparent;color:#fff;font-weight:700;font-size:14px}
+.chips .on{border-color:var(--tx)}
+.btns{display:flex;gap:8px;margin-top:16px}.btns button,.btns a{flex:1;padding:12px;border-radius:12px;border:1px solid var(--bd);background:none;color:var(--tx);text-align:center;text-decoration:none;font-weight:600}
+.btns .pri{background:var(--ac);color:#fff;border:0}.btns .wa{background:#25d366;color:#fff;border:0}.del{color:#d00!important}
+h4{margin:14px 0 6px}
+</style></head><body>
+<div class="hd"><small>📡 TAGIHAN INTERNET</small> <small id="md" style="background:#0003;padding:2px 8px;border-radius:99px;margin-left:6px"></small><h1>IURAN WIFI NORTH JOENSTONE</h1></div>
+<div class="wrap">
+<div class="card"><div class="nav"><button data-a="mv" data-n="-1">‹</button><b id="mt"></b><button data-a="mv" data-n="1">›</button></div><div class="bar"><i id="pb"></i></div><div class="sum" id="sm"></div></div>
+<div id="bn"></div><div class="tabs" id="tabs"></div>
+<div id="main"></div>
+</div>
+<div id="ov"><div id="sh"></div></div>
+<script id="data" type="application/json">{"fee":60000,"start":"2026-09","cust":[{"id":"c1","name":"BU TATIK","fee":60000,"phone":""},{"id":"c2","name":"AMEL","fee":60000,"phone":""},{"id":"c3","name":"AQILA","fee":60000,"phone":""},{"id":"c4","name":"LANA","fee":60000,"phone":""},{"id":"c5","name":"DEYUN","fee":60000,"phone":""},{"id":"c6","name":"JAYA","fee":60000,"phone":""},{"id":"c7","name":"ZAMZAR","fee":60000,"phone":""},{"id":"c8","name":"PAK TUL","fee":60000,"phone":""},{"id":"c9","name":"ORCHID","fee":60000,"phone":""},{"id":"c10","name":"ABIM","fee":60000,"phone":""},{"id":"c11","name":"ALDO","fee":60000,"phone":""},{"id":"c12","name":"MB NUR","fee":60000,"phone":""}],"pay":{"c1|2026-09":{"m":"r","d":"2026-08-29","a":60000},"c1|2026-10":{"m":"r","d":"2026-10-20","a":60000},"c1|2026-11":{"m":"c","d":"2026-10-20","a":60000},"c2|2026-09":{"m":"t","d":"2026-09-11","a":60000},"c2|2026-10":{"m":"r","d":"2026-10-11","a":60000},"c2|2026-11":{"m":"r","d":"2026-11-03","a":60000},"c3|2026-09":{"m":"t","d":"2026-09-12","a":60000},"c3|2026-10":{"m":"t","d":"2026-10-10","a":60000},"c4|2026-09":{"m":"t","d":"2026-09-05","a":60000},"c4|2026-10":{"m":"t","d":"2026-10-03","a":60000},"c4|2026-11":{"m":"t","d":"2026-11-04","a":60000},"c5|2026-09":{"m":"t","d":"2026-09-13","a":60000},"c5|2026-10":{"m":"t","d":"2026-10-27","a":60000},"c5|2026-11":{"m":"t","d":"2026-10-27","a":60000},"c6|2026-09":{"m":"t","d":"2026-09-11","a":60000},"c6|2026-10":{"m":"t","d":"2026-10-11","a":60000},"c7|2026-09":{"m":"t","d":"2026-09-11","a":60000},"c7|2026-10":{"m":"t","d":"2026-10-13","a":60000},"c8|2026-09":{"m":"g","d":"","a":0},"c8|2026-10":{"m":"t","d":"2026-10-16","a":60000},"c9|2026-09":{"m":"r","d":"2026-09-10","a":60000},"c9|2026-10":{"m":"r","d":"2026-10-12","a":60000},"c9|2026-11":{"m":"r","d":"2026-11-06","a":60000},"c10|2026-09":{"m":"t","d":"2026-09-10","a":60000},"c10|2026-10":{"m":"r","d":"2026-10-11","a":60000},"c11|2026-09":{"m":"t","d":"2026-09-06","a":60000},"c11|2026-10":{"m":"r","d":"2026-10-06","a":60000},"c11|2026-11":{"m":"r","d":"2026-11-05","a":60000},"c12|2026-09":{"m":"t","d":"2026-09-12","a":60000},"c12|2026-10":{"m":"t","d":"2026-10-05","a":60000}},"acc":[{"b":"BCA","n":"0190783031","o":"Guruh A.W"},{"b":"SeaBank (BKE)","n":"901720417328","o":"Guruh A.W"},{"b":"SeaBank (BKE)","n":"901568541809","o":"Mu’dimah"},{"b":"BRI","n":"0051-01-042803-50-8","o":""},{"b":"Shopee","n":"082234398500","o":"sejak 2017"}]}</script>
+<script>
+var M={t:['Tunai','#111111'],c:['BCA','#1228d8'],r:['BRI','#2f6fd6'],s:['SeaBank','#f59300'],h:['Shopee','#ee4d2d'],g:['Tidak bayar','#7a1f1f'],'-':['Belum bayar','#e00000']};
+var BLN=['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
+var SEED=[['Bu Tatik','r29/8','r20','r20/10'],['Amel','t11','r11','r3'],['Aqila','t12','t10','-'],['Lana','t5','t3','t4'],['Deyun','t13','t27','t27/10'],['Jaya','t11','t11','-'],['Zamzar','t11','t13','-'],['Pak Tul','g','t16','-'],['Orchid','r10','r12','r6'],['Abim','t10','r11','-'],['Aldo','t6','r6','r5'],['MB Nur','t12','t5','-']];
+var ACC0=[{b:'BCA',n:'0190783031',o:'Guruh A.W'},{b:'SeaBank (BKE)',n:'901720417328',o:'Guruh A.W'},{b:'SeaBank (BKE)',n:'901568541809',o:'Mu’dimah'},{b:'BRI',n:'0051-01-042803-50-8',o:''},{b:'Shopee',n:'082234398500',o:'sejak 2017'}];
+var KEY='wifi_nj_v2',S,cur,tab='t',edit=null,sel='-',now=new Date(),EDIT=false,tm;
+var $=function(i){return document.getElementById(i)};
+function pad(n){return n<10?'0'+n:''+n}
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function rp(n){return 'Rp'+(n||0).toLocaleString('id-ID')}
+function fd(d){if(!d)return '';var p=d.split('-');return (+p[2])+' '+BLN[+p[1]-1].slice(0,3)}
+function ml(k){var p=k.split('-');return BLN[+p[1]-1]+' '+p[0]}
+function seed(){var s={fee:60000,start:'2026-09',cust:[],pay:{},acc:ACC0.slice()};SEED.forEach(function(r,i){var id='c'+(i+1);s.cust.push({id:id,name:r[0].toUpperCase(),fee:60000,phone:''});[9,10,11].forEach(function(mo,k){var v=r[k+1];if(v==='-')return;var m=v[0];var key=id+'|2026-'+pad(mo);if(m==='g'){s.pay[key]={m:'g',d:'',a:0};return}var p=v.slice(1).split('/'),mm=p[1]?+p[1]:mo;s.pay[key]={m:m,d:'2026-'+pad(mm)+'-'+pad(+p[0]),a:60000}})});return s}
+function local(){var L=null;try{L=JSON.parse(localStorage.getItem(KEY))}catch(e){}if(!L){try{L=JSON.parse(localStorage.getItem('wifi_nj_v1'));if(L){L.cust.forEach(function(c){c.name=c.name.toUpperCase();c.fee=L.fee||60000;c.phone=''});L.start='2026-09';L.acc=ACC0.slice()}}catch(e){L=null}}return L&&L.cust&&L.pay?L:null}
+function load(){try{S=JSON.parse($('data').textContent)}catch(e){S=null}if(!S||!S.cust)S=seed();if(EDIT){try{var L=JSON.parse(localStorage.getItem(KEY));if(L&&L.cust&&L.pay)S=L}catch(e){}}}
+function build(){var c=document.documentElement.cloneNode(true);['mt','sm','tabs','main','sh','bn','md'].forEach(function(i){c.querySelector('#'+i).innerHTML=''});c.querySelector('#pb').removeAttribute('style');c.querySelector('#ov').removeAttribute('style');c.querySelector('#data').textContent=JSON.stringify(S).replace(/</g,'\\u003c');return '<!DOCTYPE html>\n'+c.outerHTML}
+function dirty(){try{return localStorage.getItem('wifi_nj_dirty')==='1'}catch(e){return false}}
+function save(){if(!EDIT)return;try{localStorage.setItem(KEY,JSON.stringify(S));localStorage.setItem('wifi_nj_dirty','1')}catch(e){alert('Gagal menyimpan di HP ini')}}
+function exp(){var b=new Blob([build()],{type:'text/html'}),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download='index.html';document.body.appendChild(a);a.click();a.remove();try{localStorage.removeItem('wifi_nj_dirty')}catch(e){}render()}
+function due(k){var p=k.split('-');return new Date(+p[0],+p[1]-1,11)}
+function isLate(k){return now>=due(k)}
+function cust(id){return S.cust.filter(function(x){return x.id===id})[0]}
+function pay(id,k){return S.pay[id+'|'+(k||cur)]}
+function paid(p){return p&&p.m!=='g'&&p.m!=='-'}
+function arrears(c){var n=0,keys=[],y=+S.start.split('-')[0],m=+S.start.split('-')[1],k;for(;;){k=y+'-'+pad(m);if(k>now.getFullYear()+'-'+pad(now.getMonth()+1))break;if(isLate(k)&&!paid(pay(c.id,k)))keys.push(k);m++;if(m>12){m=1;y++}}return keys}
+function colr(a){var s=(a.b||'').toLowerCase();return s.indexOf('bca')>-1?'#1228d8':s.indexOf('bri')>-1?'#2f6fd6':s.indexOf('sea')>-1?'#f59300':s.indexOf('shopee')>-1?'#ee4d2d':'#7c4dff'}
+function accTxt(){return S.acc.map(function(a){return '• '+a.b+' '+a.n+(a.o?' a.n. '+a.o:'')}).join('\n')}
+function msg(c){var ar=arrears(c),tot=(ar.length||1)*c.fee;return 'Halo '+c.name+', mengingatkan tagihan WiFi North Joenstone '+(ar.length>1?'('+ar.length+' bulan: '+ar.map(ml).join(', ')+')':ml(cur))+' sebesar '+rp(ar.length>1?tot:c.fee)+'. Pembayaran paling lambat tgl 10.\n\nTransfer ke:\n'+accTxt()+'\n\nTerima kasih 🙏'}
+function wa(c){var p=(c.phone||'').replace(/\D/g,'');if(p[0]==='0')p='62'+p.slice(1);return 'https://wa.me/'+p+'?text='+encodeURIComponent(msg(c))}
+function copy(t,b){var ok=false;try{var x=document.createElement('textarea');x.value=t;x.style.position='fixed';x.style.opacity=0;document.body.appendChild(x);x.select();ok=document.execCommand('copy');x.remove()}catch(e){}if(!ok){try{navigator.clipboard.writeText(t);ok=true}catch(e){}}if(b){var o=b.textContent;b.textContent=ok?'Tersalin ✓':'Gagal';setTimeout(function(){b.textContent=o},1400)}}
+function render(){
+if(!EDIT&&tab==='p')tab='t';$('md').textContent=EDIT?'✏️ Mode edit':'👁 Mode lihat';$('bn').innerHTML=EDIT&&dirty()?'<div class="card" style="border-color:#f59300"><b>Ada perubahan belum dibagikan</b><p style="margin:4px 0 8px;color:var(--mu);font-size:13px">Pelanggan masih melihat versi lama. Ekspor, lalu unggah ulang file ke hosting.</p><button class="btn pri" data-a="exp" style="border:0;margin:0">Ekspor versi lihat</button></div>':'';$('mt').textContent=ml(cur);var tot=0,np=0,tg=0;S.cust.forEach(function(c){var p=pay(c.id);tg+=c.fee;if(paid(p)){np++;tot+=p.a||0}});
+$('pb').style.width=(tg?Math.min(100,tot/tg*100):0)+'%';
+$('sm').innerHTML='<span><b>'+rp(tot)+'</b>terkumpul</span><span><b>'+np+' / '+S.cust.length+'</b>sudah bayar</span><span style="text-align:right"><b>'+rp(Math.max(0,tg-tot))+'</b>sisa target</span>';
+$('tabs').innerHTML=[['t','Tagihan'],['r','Rekap']].concat(EDIT?[['p','Pengaturan']]:[]).map(function(x){return '<button data-a="tab" data-v="'+x[0]+'" class="'+(tab===x[0]?'on':'')+'">'+x[1]+'</button>'}).join('');
+var h='';
+if(tab==='t'){S.cust.forEach(function(c,i){var p=pay(c.id),m=p?p.m:'-',late=!paid(p)&&m!=='g'&&isLate(cur),ar=arrears(c);
+var tx=paid(p)?rp(p.a)+(p.d?' · Tgl '+fd(p.d):''):m==='g'?'TIDAK BAYAR':late?'⚠ TELAT':'BELUM BAYAR';
+h+='<div class="row"><div class="no">'+(i+1)+'</div><div class="nm"'+(EDIT?' data-a="ed" data-i="'+c.id+'"':'')+'>'+esc(c.name)+(ar.length?'<small>Tunggakan '+ar.length+' bln · '+rp(ar.length*c.fee)+'</small>':'')+'</div><button class="st'+(late?' late':'')+'" style="background:'+M[m][1]+'" '+(EDIT?'data-a="st" data-i="'+c.id+'"':'')+'>'+tx+(paid(p)?'<small>'+M[m][0]+'</small>':'')+'</button></div>'});
+if(EDIT)h+='<button class="btn" data-a="new">+ TAMBAH PELANGGAN</button><button class="btn pri" data-a="bill" style="border:0">Salin pesan tagihan (yang belum bayar)</button>';
+h+='<div class="leg">'+Object.keys(M).map(function(k){return '<span style="background:'+M[k][1]+'">'+M[k][0]+'</span>'}).join('')+'</div><div class="warn">PEMBAYARAN PALING LAMBAT TGL 10</div>';
+h+=S.acc.map(function(a,i){return '<div class="acc" style="--c:'+colr(a)+'"><div><small>Via '+esc(a.b)+(a.o?' · '+esc(a.o):'')+'</small><b>'+esc(a.n)+'</b></div><button class="sm" data-a="cp" data-i="'+i+'">Salin</button></div>'}).join('')}
+if(tab==='r'){var by={},cnt={};S.cust.forEach(function(c){var p=pay(c.id);if(paid(p)){by[p.m]=(by[p.m]||0)+(p.a||0);cnt[p.m]=(cnt[p.m]||0)+1}});
+h+='<div class="card"><h4 style="margin-top:0">Pemasukan per metode · '+ml(cur)+'</h4>';
+var mx=Math.max.apply(null,Object.keys(by).map(function(k){return by[k]}).concat([1]));
+Object.keys(M).filter(function(k){return k!=='g'&&k!=='-'}).forEach(function(k){h+='<div class="rk"><div><span>'+M[k][0]+' ('+(cnt[k]||0)+')</span><b>'+rp(by[k])+'</b></div><div class="bar"><i style="width:'+((by[k]||0)/mx*100)+'%;background:'+M[k][1]+'"></i></div></div>'});
+h+='</div><div class="card"><h4 style="margin-top:0">Tunggakan</h4>';var any=false;S.cust.forEach(function(c){var a=arrears(c);if(a.length){any=true;h+='<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--bd)"><b>'+esc(c.name)+'</b><span style="color:#e00000">'+a.length+' bln · '+rp(a.length*c.fee)+'</span></div>'}});if(!any)h+='<span style="color:var(--mu)">Tidak ada tunggakan 🎉</span>';h+='</div>'}
+if(tab==='p'){h+='<div class="card"><h4 style="margin-top:0">Bagikan ke pelanggan</h4><p style="color:var(--mu);font-size:13px;margin:0 0 8px">1. Ketuk Ekspor, file index.html terunduh.<br>2. Unggah file itu ke hosting, link tetap sama.<br>3. Bagikan link ke pelanggan (hanya lihat).</p><button class="btn pri" data-a="exp" style="border:0">Ekspor versi lihat</button><button class="btn" data-a="out">Keluar mode edit</button></div><div class="card"><h4 style="margin-top:0">Rekening pembayaran</h4>'+S.acc.map(function(a,i){return '<div class="acc" style="--c:'+colr(a)+'"><div><small>'+esc(a.b)+(a.o?' · '+esc(a.o):'')+'</small><b style="font-size:15px">'+esc(a.n)+'</b></div><button class="sm" data-a="ea" data-i="'+i+'">Edit</button></div>'}).join('')+'<button class="btn" data-a="na">+ Tambah rekening</button></div>';
+h+='<div class="card"><h4 style="margin-top:0">Tarif default pelanggan baru</h4><input id="fee" type="number" inputmode="numeric" value="'+S.fee+'"></div>';
+h+='<div class="card"><h4 style="margin-top:0">Backup &amp; Restore</h4><p style="color:var(--mu);font-size:13px;margin:0 0 8px">Salin data, simpan di catatan/WhatsApp. Untuk memulihkan, tempel di kolom bawah.</p><button class="btn pri" data-a="bk" style="border:0">Salin data backup</button><textarea id="rs" rows="3" placeholder="Tempel data backup di sini"></textarea><button class="btn" data-a="rest" style="margin-top:8px">Pulihkan dari data tempelan</button></div>'}
+$('main').innerHTML=h}
+function chips(){return Object.keys(M).map(function(k){return '<button data-a="chip" data-m="'+k+'" style="background:'+M[k][1]+'" class="'+(k===sel?'on':'')+'">'+M[k][0]+'</button>'}).join('')}
+function sheet(h){$('sh').innerHTML=h;$('ov').style.display='flex'}
+function closeS(){$('ov').style.display='none'}
+function openC(id){edit=id;var c=id?cust(id):{name:'',fee:S.fee,phone:''},p=id?pay(id):null;sel=p?p.m:'-';
+var dv=p&&p.d?p.d:now.getFullYear()+'-'+pad(now.getMonth()+1)+'-'+pad(now.getDate());
+var h='<h3>'+(id?esc(c.name):'Pelanggan baru')+'</h3><label>Nama</label><input id="fn" value="'+esc(c.name)+'" style="text-transform:uppercase"><label>No. WhatsApp</label><input id="fp" inputmode="tel" value="'+esc(c.phone)+'" placeholder="08xxxxxxxxxx"><label>Tarif per bulan (Rp)</label><input id="ff" type="number" inputmode="numeric" value="'+c.fee+'">';
+if(id)h+='<label>Pembayaran '+ml(cur)+'</label><div class="chips">'+chips()+'</div><label>Tanggal bayar</label><input type="date" id="fdt" value="'+dv+'"><label>Nominal (Rp)</label><input type="number" id="fa" inputmode="numeric" value="'+(p&&p.a?p.a:c.fee)+'">';
+h+='<div class="btns">'+(id?'<button class="del" data-a="dc">Hapus</button><a class="wa" target="_blank" rel="noopener" href="'+wa(c)+'">WhatsApp</a>':'')+'<button data-a="cl">Batal</button><button class="pri" data-a="sv">Simpan</button></div>';sheet(h)}
+function openA(i){edit=i;var a=i==null?{b:'',n:'',o:''}:S.acc[i];sheet('<h3>'+(i==null?'Rekening baru':'Edit rekening')+'</h3><label>Bank / platform</label><input id="ab" value="'+esc(a.b)+'" placeholder="BCA, BRI, SeaBank, Shopee..."><label>Nomor</label><input id="an" value="'+esc(a.n)+'"><label>Atas nama (opsional)</label><input id="ao" value="'+esc(a.o)+'"><div class="btns">'+(i==null?'':'<button class="del" data-a="da">Hapus</button>')+'<button data-a="cl">Batal</button><button class="pri" data-a="sa">Simpan</button></div>')}
+document.addEventListener('click',function(e){var t=e.target.closest('[data-a]');if(!t){if(e.target.id==='ov')closeS();return}var a=t.dataset.a;if(!EDIT&&a!=='mv'&&a!=='tab'&&a!=='cp')return;
+if(a==='mv'){var p=cur.split('-'),d=new Date(+p[0],+p[1]-1+ +t.dataset.n,1);cur=d.getFullYear()+'-'+pad(d.getMonth()+1);render()}
+else if(a==='tab'){tab=t.dataset.v;render()}
+else if(a==='st'||a==='ed')openC(t.dataset.i);
+else if(a==='new')openC(null);else if(a==='na')openA(null);else if(a==='ea')openA(+t.dataset.i);
+else if(a==='chip'){sel=t.dataset.m;[].forEach.call(document.querySelectorAll('.chips button'),function(b){b.className=b.dataset.m===sel?'on':''})}
+else if(a==='exp')exp();
+else if(a==='out'){try{localStorage.removeItem('wifi_nj_owner')}catch(x){}location.hash='';location.reload()}
+else if(a==='cl')closeS();
+else if(a==='cp'){var x=S.acc[t.dataset.i];copy(x.n.replace(/-/g,''),t)}
+else if(a==='bill'){var l=S.cust.filter(function(c){return !paid(pay(c.id))});copy('*TAGIHAN WIFI NORTH JOENSTONE – '+ml(cur).toUpperCase()+'*\nBelum bayar:\n'+l.map(function(c,i){return (i+1)+'. '+c.name+' – '+rp(c.fee)}).join('\n')+'\n\nPaling lambat tgl 10.\nTransfer ke:\n'+accTxt(),t)}
+else if(a==='sv'){var n=$('fn').value.trim().toUpperCase();if(!n)return;var f=+$('ff').value||S.fee,ph=$('fp').value.trim();
+if(!edit){S.cust.push({id:'c'+Date.now(),name:n,fee:f,phone:ph})}else{var c=cust(edit);c.name=n;c.fee=f;c.phone=ph;var k=edit+'|'+cur;if(sel==='-')delete S.pay[k];else S.pay[k]={m:sel,d:sel==='g'?'':$('fdt').value,a:sel==='g'?0:(+$('fa').value||f)}}
+save();closeS();render()}
+else if(a==='dc'){if(confirm('Hapus pelanggan ini beserta riwayatnya?')){S.cust=S.cust.filter(function(x){return x.id!==edit});Object.keys(S.pay).forEach(function(k){if(k.indexOf(edit+'|')===0)delete S.pay[k]});save();closeS();render()}}
+else if(a==='sa'){var o={b:$('ab').value.trim(),n:$('an').value.trim(),o:$('ao').value.trim()};if(!o.b||!o.n)return;if(edit==null)S.acc.push(o);else S.acc[edit]=o;save();closeS();render()}
+else if(a==='da'){S.acc.splice(edit,1);save();closeS();render()}
+else if(a==='bk')copy(JSON.stringify(S),t);
+else if(a==='rest'){try{var d=JSON.parse($('rs').value);if(!d.cust||!d.pay)throw 0;if(confirm('Ganti semua data dengan backup ini?')){S=d;save();render();t.textContent='Berhasil dipulihkan ✓'}}catch(x){t.textContent='Data tidak valid'}}});
+document.addEventListener('change',function(e){if(e.target.id==='fee'){S.fee=+e.target.value||60000;save()}});
+cur=now.getFullYear()+'-'+pad(now.getMonth()+1);try{if(location.hash==='#edit')localStorage.setItem('wifi_nj_owner','1');EDIT=localStorage.getItem('wifi_nj_owner')==='1'}catch(e){}
+load();render();
+</script>
+</body></html>
