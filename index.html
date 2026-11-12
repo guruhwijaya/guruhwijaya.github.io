@@ -165,6 +165,7 @@ else if(a==='bk')copy(JSON.stringify(S),t);
 else if(a==='rest'){try{var d=JSON.parse($('rs').value);if(!d.cust||!d.pay)throw 0;if(confirm('Ganti semua data dengan backup ini?')){S=d;save();render();t.textContent='Berhasil dipulihkan ✓'}}catch(x){t.textContent='Data tidak valid'}}});
 document.addEventListener('change',function(e){if(e.target.id==='hide'){S.hide=e.target.checked;save()}if(e.target.id==='ipb'){S.ipBase=e.target.value.trim();save()}if(e.target.id==='fee'){S.fee=+e.target.value||60000;save()}});
 cur=now.getFullYear()+'-'+pad(now.getMonth()+1);try{if(location.hash==='#edit')localStorage.setItem('wifi_nj_owner','1');EDIT=localStorage.getItem('wifi_nj_owner')==='1'}catch(e){}
+window.addEventListener('hashchange',function(){if(location.hash==='#edit')location.reload()});
 cfgLoad();load();render();conn();
 try{if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(function(){})}catch(e){}
 </script>
